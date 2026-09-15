@@ -1,100 +1,615 @@
-/* Pengaturan Umum */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+    background: #080808;
+    color: #f2f2f2;
+    font-family: "Inter", sans-serif;
 }
 
-/* Header */
+/* ================= NAVBAR ================= */
+
 header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.88);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #292929;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
+.navbar {
+    max-width: 1200px;
+    margin: auto;
 
-/* Navigasi */
-nav {
-    background-color: #34495e;
+    height: 75px;
+
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.logo span,
+h1 span,
+h2 span,
+.section-title span,
+.evidence h2 span,
+footer span {
+    color: #e50914;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #e50914;
+}
+
+.case-button {
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #e50914;
+    padding: 11px 18px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.case-button:hover {
+    background: #e50914;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 120px 25px 80px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    background: #e50914;
+
+    filter: blur(180px);
+    opacity: 0.12;
+
+    right: 50px;
+    top: 200px;
+}
+
+.hero-content {
+    max-width: 650px;
+    z-index: 1;
+}
+
+.classified {
+    color: #e50914;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(90px, 13vw, 180px);
+
+    line-height: 0.8;
+
+    letter-spacing: 5px;
+}
+
+.hero h2 {
+    margin-top: 20px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 42px;
+
+    letter-spacing: 5px;
+}
+
+.description {
+    color: #999;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+
+    margin: 20px 0 30px;
+}
+
+.hero-buttons {
+    display: flex;
     gap: 15px;
-    padding: 10px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    background-color: #1abc9c;
-    border-radius: 4px;
-}
-
-/* Layout Konten */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 15px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-/* Tombol Link */
-.btn {
+.btn-red,
+.btn-outline {
     display: inline-block;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
+
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-right: 5px;
+
+    padding: 14px 25px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #2980b9;
+.btn-red {
+    background: #e50914;
+    color: white;
 }
 
-/* Footer */
-footer {
+.btn-red:hover {
+    background: #ff202c;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: white;
+
+    border: 1px solid #444;
+}
+
+.btn-outline:hover {
+    border-color: #e50914;
+}
+
+
+/* ================= CASE FILE ================= */
+
+.hero-file {
+    width: 280px;
+
+    border: 1px solid #3a3a3a;
+
+    padding: 30px;
+
+    transform: rotate(4deg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #080808
+        );
+
+    box-shadow: 15px 20px 50px #000;
+}
+
+.file-top {
+    color: #e50914;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    border-bottom: 1px solid #333;
+
+    padding-bottom: 15px;
+}
+
+.fingerprint {
     text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
+
+    font-size: 100px;
+
+    color: #333;
+
+    margin: 25px 0;
+}
+
+.hero-file h3 {
+    font-family: "Bebas Neue";
+
+    font-size: 18px;
+
+    color: #888;
+}
+
+.hero-file strong {
+    font-size: 25px;
+}
+
+.file-line {
+    height: 1px;
+    background: #333;
+
+    margin: 25px 0;
+}
+
+.hero-file p {
+    color: #777;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-file b {
+    color: #e50914;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 25px;
+}
+
+.section-label {
+    color: #e50914;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: "Bebas Neue";
+
+    font-size: 60px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================= DOSSIER ================= */
+
+.dossier-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.dossier-card {
+    background: #101010;
+
+    border: 1px solid #292929;
+
+    padding: 35px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.dossier-card:hover {
+    border-color: #e50914;
+
+    transform: translateY(-8px);
+}
+
+.number {
+    color: #e50914;
+
+    font-family: "Bebas Neue";
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.dossier-card h3 {
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.dossier-card p {
+    color: #777;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* ================= MEMBERS ================= */
+
+.members {
+    max-width: 1200px;
+}
+
+.member-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.member-card {
+    background: #111;
+
+    border: 1px solid #292929;
+
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #e50914;
+}
+
+.photo {
+    height: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1b1b1b,
+            #090909
+        );
+
+    color: #444;
+
+    font-family: "Bebas Neue";
+
+    font-size: 90px;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info small {
+    color: #e50914;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.member-info h3 {
+    margin-top: 8px;
+
+    font-size: 17px;
+}
+
+.member-info p {
     color: #666;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* ================= EVIDENCE ================= */
+
+.evidence {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #090909 20%,
+            rgba(9,9,9,.7),
+            #090909
+        );
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.evidence-content {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.evidence h2 {
+    font-family: "Bebas Neue";
+
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: .9;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.evidence p:not(.section-label) {
+    color: #777;
+
+    max-width: 550px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h2 {
+    font-family: "Bebas Neue";
+
+    font-size: 35px;
+
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #555;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-top: 5px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right strong {
+    color: #e50914;
+
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 70px;
+    }
+
+    .hero-file {
+        align-self: center;
+    }
+
+    .dossier-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 90px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-file {
+        width: 100%;
+    }
 }
