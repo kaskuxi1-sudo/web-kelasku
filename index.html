@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,7 +9,6 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,223 +19,297 @@
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                XI <span>TKJ 1</span>
-            </div>
 
-            <ul class="nav-menu">
+            <a href="#home" class="logo">
+                XI <span>TKJ 1</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#dossier">DOSSIER</a></li>
                 <li><a href="#members">MEMBERS</a></li>
                 <li><a href="#evidence">EVIDENCE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
 
-            <a href="#contact" class="case-button">
+            <a href="#dossier" class="case-button">
                 CASE #011
             </a>
+
         </nav>
     </header>
 
 
     <!-- HERO -->
-    <section class="hero" id="home">
+    <main>
 
-        <div class="hero-content">
+        <section class="hero" id="home">
 
-            <p class="classified">● CLASSIFIED INFORMATION</p>
+            <div class="hero-content">
 
-            <h1>
-                XI TKJ <span>1</span>
-            </h1>
+                <p class="classified">
+                    ● CLASSIFIED INFORMATION
+                </p>
 
-            <h2>
-                THE CRIME FILES
-            </h2>
+                <h1>
+                    XI TKJ <span>1</span>
+                </h1>
 
-            <p class="description">
-                Satu kelas. Banyak karakter.
-                Sebuah cerita yang belum selesai.
-                Selamat datang di arsip rahasia XI TKJ 1.
+                <h2>
+                    THE CRIME FILES
+                </h2>
+
+                <p class="description">
+                    Satu kelas. Banyak karakter.
+                    Sebuah cerita yang belum selesai.
+                    Selamat datang di arsip rahasia XI TKJ 1.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#members" class="btn-red">
+                        OPEN FILE
+                    </a>
+
+                    <a href="#dossier" class="btn-outline">
+                        VIEW DOSSIER
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-file">
+
+                <div class="file-top">
+                    CONFIDENTIAL
+                </div>
+
+                <div class="fingerprint">
+                    ◎
+                </div>
+
+                <h3>CASE</h3>
+
+                <strong>
+                    #XI-TKJ-01
+                </strong>
+
+                <div class="file-line"></div>
+
+                <p>STATUS</p>
+
+                <b>ACTIVE</b>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOSSIER -->
+        <section class="section" id="dossier">
+
+            <p class="section-label">
+                CASE INFORMATION
             </p>
 
-            <div class="hero-buttons">
+            <h2 class="section-title">
+                THE <span>DOSSIER</span>
+            </h2>
+
+            <div class="dossier-grid">
+
+                <div class="dossier-card">
+                    <div class="number">01</div>
+
+                    <h3>IDENTITY</h3>
+
+                    <p>
+                        XI TKJ 1 adalah kelas dengan
+                        spesialisasi Teknik Komputer dan Jaringan.
+                    </p>
+                </div>
+
+
+                <div class="dossier-card">
+                    <div class="number">02</div>
+
+                    <h3>MISSION</h3>
+
+                    <p>
+                        Belajar, berkembang, bekerja sama,
+                        dan menyelesaikan setiap misi bersama.
+                    </p>
+                </div>
+
+
+                <div class="dossier-card">
+                    <div class="number">03</div>
+
+                    <h3>STATUS</h3>
+
+                    <p>
+                        Kasus masih berlangsung.
+                        Belum ada anggota yang berhasil melarikan diri dari tugas.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEMBERS -->
+        <section class="section" id="members">
+
+            <p class="section-label">
+                PERSONS OF INTEREST
+            </p>
+
+            <h2 class="section-title">
+                CLASS <span>MEMBERS</span>
+            </h2>
+
+            <div class="member-grid">
+
+                <div class="member-card">
+                    <div class="photo">?</div>
+
+                    <div class="member-info">
+                        <small>SUSPECT #01</small>
+                        <h3>Nama Siswa</h3>
+                        <p>TKJ Specialist</p>
+                    </div>
+                </div>
+
+
+                <div class="member-card">
+                    <div class="photo">?</div>
+
+                    <div class="member-info">
+                        <small>SUSPECT #02</small>
+                        <h3>Nama Siswa</h3>
+                        <p>Network Specialist</p>
+                    </div>
+                </div>
+
+
+                <div class="member-card">
+                    <div class="photo">?</div>
+
+                    <div class="member-info">
+                        <small>SUSPECT #03</small>
+                        <h3>Nama Siswa</h3>
+                        <p>System Specialist</p>
+                    </div>
+                </div>
+
+
+                <div class="member-card">
+                    <div class="photo">?</div>
+
+                    <div class="member-info">
+                        <small>SUSPECT #04</small>
+                        <h3>Nama Siswa</h3>
+                        <p>Cyber Specialist</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVIDENCE -->
+        <section class="evidence" id="evidence">
+
+            <div class="evidence-content">
+
+                <p class="section-label">
+                    ARCHIVED EVIDENCE
+                </p>
+
+                <h2>
+                    EVERY <span>MOMENT</span>
+                    LEAVES A TRACE.
+                </h2>
+
+                <p>
+                    Dokumentasikan kegiatan, kenangan,
+                    perjalanan, dan momen terbaik XI TKJ 1.
+                </p>
+
                 <a href="#members" class="btn-red">
-                    OPEN FILE
+                    VIEW EVIDENCE
                 </a>
 
-                <a href="#dossier" class="btn-outline">
-                    VIEW DOSSIER
-                </a>
             </div>
 
-        </div>
+        </section>
 
-        <div class="hero-file">
-
-            <div class="file-top">
-                CONFIDENTIAL
-            </div>
-
-            <div class="fingerprint">
-                ◎
-            </div>
-
-            <h3>CASE</h3>
-            <strong>#XI-TKJ-01</strong>
-
-            <div class="file-line"></div>
-
-            <p>STATUS</p>
-            <b>ACTIVE</b>
-
-        </div>
-
-    </section>
+    </main>
 
 
-    <!-- DOSSIER -->
-    <section class="section" id="dossier">
-
-        <p class="section-label">CASE INFORMATION</p>
-
-        <h2 class="section-title">
-            THE <span>DOSSIER</span>
-        </h2>
-
-        <div class="dossier-grid">
-
-            <div class="dossier-card">
-                <div class="number">01</div>
-                <h3>IDENTITY</h3>
-                <p>
-                    XI TKJ 1 adalah kelas dengan
-                    spesialisasi Teknik Komputer dan Jaringan.
-                </p>
-            </div>
-
-            <div class="dossier-card">
-                <div class="number">02</div>
-                <h3>MISSION</h3>
-                <p>
-                    Belajar, berkembang, bekerja sama,
-                    dan menyelesaikan setiap misi bersama.
-                </p>
-            </div>
-
-            <div class="dossier-card">
-                <div class="number">03</div>
-                <h3>STATUS</h3>
-                <p>
-                    Kasus masih berlangsung.
-                    Belum ada anggota yang berhasil melarikan diri dari tugas.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MEMBERS -->
-    <section class="section members" id="members">
-
-        <p class="section-label">PERSONS OF INTEREST</p>
-
-        <h2 class="section-title">
-            CLASS <span>MEMBERS</span>
-        </h2>
-
-        <div class="member-grid">
-
-            <div class="member-card">
-                <div class="photo">
-                    ?
-                </div>
-                <div class="member-info">
-                    <small>SUSPECT #01</small>
-                    <h3>Nama Siswa</h3>
-                    <p>TKJ Specialist</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <div class="photo">
-                    ?
-                </div>
-                <div class="member-info">
-                    <small>SUSPECT #02</small>
-                    <h3>Nama Siswa</h3>
-                    <p>Network Specialist</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <div class="photo">
-                    ?
-                </div>
-                <div class="member-info">
-                    <small>SUSPECT #03</small>
-                    <h3>Nama Siswa</h3>
-                    <p>System Specialist</p>
-                </div>
-            </div>
-
-            <div class="member-card">
-                <div class="photo">
-                    ?
-                </div>
-                <div class="member-info">
-                    <small>SUSPECT #04</small>
-                    <h3>Nama Siswa</h3>
-                    <p>Cyber Specialist</p>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EVIDENCE -->
-    <section class="evidence" id="evidence">
-
-        <div class="evidence-content">
-
-            <p class="section-label">ARCHIVED EVIDENCE</p>
-
-            <h2>
-                EVERY <span>MOMENT</span>
-                LEAVES A TRACE.
-            </h2>
-
-            <p>
-                Dokumentasikan kegiatan, kenangan,
-                perjalanan, dan momen terbaik XI TKJ 1.
-            </p>
-
-            <a href="#" class="btn-red">
-                VIEW EVIDENCE
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
+    <!-- FOOTER -->
     <footer id="contact">
 
         <div>
-            <h2>XI TKJ <span>1</span></h2>
-            <p>THE CRIME FILES</p>
+            <h2>
+                XI TKJ <span>1</span>
+            </h2>
+
+            <p>
+                THE CRIME FILES
+            </p>
         </div>
 
         <div class="footer-right">
-            <p>CASE STATUS</p>
-            <strong>● ACTIVE</strong>
+
+            <p>
+                CASE STATUS
+            </p>
+
+            <strong>
+                ● ACTIVE
+            </strong>
+
         </div>
 
     </footer>
 
+
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+        });
+
+
+        document.querySelectorAll(".nav-menu a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navMenu.classList.remove("active");
+
+                });
+
+            });
+
+    </script>
+
 </body>
 </html>
+```
