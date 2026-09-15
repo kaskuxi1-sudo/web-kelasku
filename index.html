@@ -3,56 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Kelas 10 IPA 2</title>
+
+    <title>XI TKJ 1 | Crime Files</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Header / Banner -->
+    <!-- NAVBAR -->
     <header>
-        <h1>Selamat Datang di Kelas 11 TKJ 1</h1>
-        <p>Pusat Informasi, Jadwal, dan Materi Pembelajaran</p>
+        <nav class="navbar">
+            <div class="logo">
+                XI <span>TKJ 1</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#dossier">DOSSIER</a></li>
+                <li><a href="#members">MEMBERS</a></li>
+                <li><a href="#evidence">EVIDENCE</a></li>
+            </ul>
+
+            <a href="#contact" class="case-button">
+                CASE #011
+            </a>
+        </nav>
     </header>
 
-    <!-- Navigasi Sederhana -->
-    <nav>
-        <a href="#pengumuman">Pengumuman</a>
-        <a href="#jadwal">Jadwal</a>
-        <a href="#materi">Materi</a>
-    </nav>
 
-    <!-- Konten Utama -->
-    <main class="container">
-        
-        <!-- Seksi Pengumuman -->
-        <section id="pengumuman" class="card">
-            <h2>📢 Pengumuman Kelas</h2>
-            <p>Ujian Tengah Semester akan dilaksanakan mulai hari Senin depan. Harap mempersiapkan materi bab 1-3.</p>
-        </section>
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-        <!-- Seksi Jadwal -->
-        <section id="jadwal" class="card">
-            <h2>📅 Jadwal Pelajaran Hari Ini</h2>
-            <ul>
-                <li><strong>07.00 - 08.30:</strong> Matematika</li>
-                <li><strong>08.30 - 10.00:</strong> Fisika</li>
-                <li><strong>10.15 - 11.45:</strong> Bahasa Indonesia</li>
-            </ul>
-        </section>
+        <div class="hero-content">
 
-        <!-- Seksi Materi -->
-        <section id="materi" class="card">
-            <h2>📚 Link Materi & Tugas</h2>
-            <p>Unduh modul atau kumpulkan tugas melalui tautan berikut:</p>
-            <a href="#" class="btn">Modul Fisika (PDF)</a>
-            <a href="#" class="btn">Kumpulkan Tugas</a>
-        </section>
+            <p class="classified">● CLASSIFIED INFORMATION</p>
 
-    </main>
+            <h1>
+                XI TKJ <span>1</span>
+            </h1>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Kelas 10 IPA 2. Dibuat untuk keperluan pembelajaran.</p>
+            <h2>
+                THE CRIME FILES
+            </h2>
+
+            <p class="description">
+                Satu kelas. Banyak karakter.
+                Sebuah cerita yang belum selesai.
+                Selamat datang di arsip rahasia XI TKJ 1.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#members" class="btn-red">
+                    OPEN FILE
+                </a>
+
+                <a href="#dossier" class="btn-outline">
+                    VIEW DOSSIER
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-file">
+
+            <div class="file-top">
+                CONFIDENTIAL
+            </div>
+
+            <div class="fingerprint">
+                ◎
+            </div>
+
+            <h3>CASE</h3>
+            <strong>#XI-TKJ-01</strong>
+
+            <div class="file-line"></div>
+
+            <p>STATUS</p>
+            <b>ACTIVE</b>
+
+        </div>
+
+    </section>
+
+
+    <!-- DOSSIER -->
+    <section class="section" id="dossier">
+
+        <p class="section-label">CASE INFORMATION</p>
+
+        <h2 class="section-title">
+            THE <span>DOSSIER</span>
+        </h2>
+
+        <div class="dossier-grid">
+
+            <div class="dossier-card">
+                <div class="number">01</div>
+                <h3>IDENTITY</h3>
+                <p>
+                    XI TKJ 1 adalah kelas dengan
+                    spesialisasi Teknik Komputer dan Jaringan.
+                </p>
+            </div>
+
+            <div class="dossier-card">
+                <div class="number">02</div>
+                <h3>MISSION</h3>
+                <p>
+                    Belajar, berkembang, bekerja sama,
+                    dan menyelesaikan setiap misi bersama.
+                </p>
+            </div>
+
+            <div class="dossier-card">
+                <div class="number">03</div>
+                <h3>STATUS</h3>
+                <p>
+                    Kasus masih berlangsung.
+                    Belum ada anggota yang berhasil melarikan diri dari tugas.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMBERS -->
+    <section class="section members" id="members">
+
+        <p class="section-label">PERSONS OF INTEREST</p>
+
+        <h2 class="section-title">
+            CLASS <span>MEMBERS</span>
+        </h2>
+
+        <div class="member-grid">
+
+            <div class="member-card">
+                <div class="photo">
+                    ?
+                </div>
+                <div class="member-info">
+                    <small>SUSPECT #01</small>
+                    <h3>Nama Siswa</h3>
+                    <p>TKJ Specialist</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="photo">
+                    ?
+                </div>
+                <div class="member-info">
+                    <small>SUSPECT #02</small>
+                    <h3>Nama Siswa</h3>
+                    <p>Network Specialist</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="photo">
+                    ?
+                </div>
+                <div class="member-info">
+                    <small>SUSPECT #03</small>
+                    <h3>Nama Siswa</h3>
+                    <p>System Specialist</p>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="photo">
+                    ?
+                </div>
+                <div class="member-info">
+                    <small>SUSPECT #04</small>
+                    <h3>Nama Siswa</h3>
+                    <p>Cyber Specialist</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EVIDENCE -->
+    <section class="evidence" id="evidence">
+
+        <div class="evidence-content">
+
+            <p class="section-label">ARCHIVED EVIDENCE</p>
+
+            <h2>
+                EVERY <span>MOMENT</span>
+                LEAVES A TRACE.
+            </h2>
+
+            <p>
+                Dokumentasikan kegiatan, kenangan,
+                perjalanan, dan momen terbaik XI TKJ 1.
+            </p>
+
+            <a href="#" class="btn-red">
+                VIEW EVIDENCE
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <footer id="contact">
+
+        <div>
+            <h2>XI TKJ <span>1</span></h2>
+            <p>THE CRIME FILES</p>
+        </div>
+
+        <div class="footer-right">
+            <p>CASE STATUS</p>
+            <strong>● ACTIVE</strong>
+        </div>
+
     </footer>
 
 </body>
