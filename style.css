@@ -1,3 +1,8 @@
+```css
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,64 +16,88 @@ html {
 body {
     background: #080808;
     color: #f2f2f2;
+
     font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
 }
 
-/* ================= NAVBAR ================= */
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
-    z-index: 1000;
 
-    background: rgba(5, 5, 5, 0.88);
-    backdrop-filter: blur(12px);
+    z-index: 999;
 
-    border-bottom: 1px solid #292929;
+    background: rgba(5, 5, 5, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #252525;
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: auto;
+    width: min(1200px, 100%);
 
     height: 75px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: auto;
 
     padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
 .logo {
+    color: white;
+
+    text-decoration: none;
+
     font-family: "Bebas Neue", sans-serif;
+
     font-size: 30px;
+
     letter-spacing: 2px;
 }
 
-.logo span,
-h1 span,
-h2 span,
-.section-title span,
-.evidence h2 span,
-footer span {
+.logo span {
     color: #e50914;
 }
 
 .nav-menu {
     display: flex;
-    gap: 35px;
+
+    align-items: center;
+
+    gap: 30px;
+
     list-style: none;
 }
 
 .nav-menu a {
     color: #aaa;
+
     text-decoration: none;
 
     font-size: 12px;
-    font-weight: 700;
+
+    font-weight: 800;
 
     letter-spacing: 2px;
 
@@ -81,13 +110,18 @@ footer span {
 
 .case-button {
     color: white;
+
     text-decoration: none;
 
     border: 1px solid #e50914;
+
     padding: 11px 18px;
 
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
 
     transition: 0.3s;
 }
@@ -96,20 +130,41 @@ footer span {
     background: #e50914;
 }
 
+.menu-toggle {
+    display: none;
 
-/* ================= HERO ================= */
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
+    width: min(1200px, 100%);
+
     min-height: 100vh;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    max-width: 1200px;
     margin: auto;
 
-    padding: 120px 25px 80px;
+    padding: 130px 25px 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
 
     position: relative;
 }
@@ -122,64 +177,81 @@ footer span {
     width: 450px;
     height: 450px;
 
+    right: 5%;
+
+    top: 25%;
+
     background: #e50914;
 
     filter: blur(180px);
-    opacity: 0.12;
 
-    right: 50px;
-    top: 200px;
+    opacity: 0.1;
+
+    pointer-events: none;
 }
 
 .hero-content {
     max-width: 650px;
-    z-index: 1;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .classified {
     color: #e50914;
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 3px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
     font-family: "Bebas Neue", sans-serif;
 
-    font-size: clamp(90px, 13vw, 180px);
+    font-size: clamp(90px, 13vw, 175px);
 
     line-height: 0.8;
 
     letter-spacing: 5px;
 }
 
-.hero h2 {
-    margin-top: 20px;
+.hero h1 span {
+    color: #e50914;
+}
 
+.hero h2 {
     font-family: "Bebas Neue", sans-serif;
 
-    font-size: 42px;
+    font-size: clamp(30px, 4vw, 48px);
 
     letter-spacing: 5px;
+
+    margin-top: 25px;
 }
 
 .description {
-    color: #999;
+    color: #888;
 
     line-height: 1.8;
 
     max-width: 520px;
 
     margin: 20px 0 30px;
+
+    font-size: 15px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
 }
 
 .btn-red,
@@ -188,9 +260,10 @@ footer span {
 
     text-decoration: none;
 
-    padding: 14px 25px;
+    padding: 14px 24px;
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
@@ -200,11 +273,13 @@ footer span {
 
 .btn-red {
     background: #e50914;
+
     color: white;
 }
 
 .btn-red:hover {
-    background: #ff202c;
+    background: #ff1a25;
+
     transform: translateY(-3px);
 }
 
@@ -219,16 +294,16 @@ footer span {
 }
 
 
-/* ================= CASE FILE ================= */
+/* =========================
+   CASE FILE
+========================= */
 
 .hero-file {
+    flex: 0 0 280px;
+
     width: 280px;
 
-    border: 1px solid #3a3a3a;
-
     padding: 30px;
-
-    transform: rotate(4deg);
 
     background:
         linear-gradient(
@@ -237,26 +312,35 @@ footer span {
             #080808
         );
 
+    border: 1px solid #333;
+
+    transform: rotate(4deg);
+
     box-shadow: 15px 20px 50px #000;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .file-top {
     color: #e50914;
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: 900;
 
     letter-spacing: 3px;
 
-    border-bottom: 1px solid #333;
-
     padding-bottom: 15px;
+
+    border-bottom: 1px solid #333;
 }
 
 .fingerprint {
     text-align: center;
 
-    font-size: 100px;
+    font-size: 90px;
 
     color: #333;
 
@@ -264,50 +348,57 @@ footer span {
 }
 
 .hero-file h3 {
+    color: #777;
+
     font-family: "Bebas Neue";
 
     font-size: 18px;
-
-    color: #888;
 }
 
 .hero-file strong {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .file-line {
     height: 1px;
+
     background: #333;
 
     margin: 25px 0;
 }
 
 .hero-file p {
-    color: #777;
+    color: #666;
 
-    font-size: 10px;
+    font-size: 9px;
+
     letter-spacing: 2px;
 }
 
 .hero-file b {
     color: #e50914;
+
+    font-size: 12px;
 }
 
 
-/* ================= SECTION ================= */
+/* =========================
+   GENERAL SECTION
+========================= */
 
 .section {
-    max-width: 1200px;
+    width: min(1200px, 100%);
 
     margin: auto;
 
-    padding: 110px 25px;
+    padding: 100px 25px;
 }
 
 .section-label {
     color: #e50914;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 4px;
@@ -318,15 +409,21 @@ footer span {
 .section-title {
     font-family: "Bebas Neue";
 
-    font-size: 60px;
+    font-size: clamp(50px, 7vw, 75px);
 
     letter-spacing: 4px;
 
     margin-bottom: 45px;
 }
 
+.section-title span {
+    color: #e50914;
+}
 
-/* ================= DOSSIER ================= */
+
+/* =========================
+   DOSSIER
+========================= */
 
 .dossier-grid {
     display: grid;
@@ -344,8 +441,6 @@ footer span {
 
     padding: 35px;
 
-    position: relative;
-
     transition: 0.3s;
 }
 
@@ -362,11 +457,11 @@ footer span {
 
     font-size: 45px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .dossier-card h3 {
-    font-size: 17px;
+    font-size: 16px;
 
     letter-spacing: 2px;
 
@@ -382,11 +477,9 @@ footer span {
 }
 
 
-/* ================= MEMBERS ================= */
-
-.members {
-    max-width: 1200px;
-}
+/* =========================
+   MEMBERS
+========================= */
 
 .member-grid {
     display: grid;
@@ -402,20 +495,24 @@ footer span {
 
     border: 1px solid #292929;
 
+    overflow: hidden;
+
     transition: 0.3s;
 }
 
 .member-card:hover {
-    transform: translateY(-7px);
-
     border-color: #e50914;
+
+    transform: translateY(-7px);
 }
 
 .photo {
     height: 240px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background:
@@ -445,9 +542,9 @@ footer span {
 }
 
 .member-info h3 {
-    margin-top: 8px;
-
     font-size: 17px;
+
+    margin-top: 8px;
 }
 
 .member-info p {
@@ -459,30 +556,34 @@ footer span {
 }
 
 
-/* ================= EVIDENCE ================= */
+/* =========================
+   EVIDENCE
+========================= */
 
 .evidence {
     min-height: 500px;
 
     display: flex;
+
     align-items: center;
 
-    padding: 80px 25px;
+    padding: 90px 25px;
 
     background:
         linear-gradient(
             90deg,
-            #090909 20%,
-            rgba(9,9,9,.7),
+            #090909,
+            #151515,
             #090909
         );
 
     border-top: 1px solid #222;
+
     border-bottom: 1px solid #222;
 }
 
 .evidence-content {
-    max-width: 900px;
+    width: min(900px, 100%);
 
     margin: auto;
 }
@@ -492,35 +593,43 @@ footer span {
 
     font-size: clamp(50px, 8vw, 100px);
 
-    line-height: .9;
+    line-height: 0.9;
 
     letter-spacing: 4px;
 
     margin-bottom: 25px;
 }
 
-.evidence p:not(.section-label) {
+.evidence h2 span {
+    color: #e50914;
+}
+
+.evidence-content > p:not(.section-label) {
     color: #777;
 
-    max-width: 550px;
-
     line-height: 1.7;
+
+    max-width: 550px;
 
     margin-bottom: 30px;
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    max-width: 1200px;
+    width: min(1200px, 100%);
 
     margin: auto;
 
     padding: 50px 25px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
@@ -532,10 +641,14 @@ footer h2 {
     letter-spacing: 3px;
 }
 
+footer h2 span {
+    color: #e50914;
+}
+
 footer p {
     color: #555;
 
-    font-size: 11px;
+    font-size: 10px;
 
     letter-spacing: 2px;
 
@@ -549,32 +662,34 @@ footer p {
 .footer-right strong {
     color: #e50914;
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ==================================================
+   TABLET
+================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .nav-menu {
+        gap: 18px;
+    }
+
+    .case-button {
         display: none;
     }
 
     .hero {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 70px;
+        gap: 40px;
     }
 
     .hero-file {
-        align-self: center;
-    }
+        flex-basis: 240px;
 
-    .dossier-grid {
-        grid-template-columns: 1fr;
+        width: 240px;
+
+        padding: 25px;
     }
 
     .member-grid {
@@ -582,7 +697,201 @@ footer p {
             repeat(2, 1fr);
     }
 
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        order: 3;
+    }
+
+    .case-button {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #0b0b0b;
+
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+
+        border-top: 1px solid #222;
+    }
+
+    .nav-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 17px 20px;
+
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 120px 18px 70px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(75px, 22vw, 120px);
+
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: 31px;
+
+        letter-spacing: 3px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .btn-red,
+    .btn-outline {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 15px;
+    }
+
+    .hero-file {
+        width: min(280px, 90%);
+
+        flex-basis: auto;
+
+        margin: auto;
+
+        transform: rotate(2deg);
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 75px 18px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+
+    /* DOSSIER */
+
+    .dossier-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .dossier-card {
+        padding: 28px;
+    }
+
+
+    /* MEMBERS */
+
+    .member-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .photo {
+        height: 180px;
+
+        font-size: 65px;
+    }
+
+    .member-info {
+        padding: 15px;
+    }
+
+    .member-info h3 {
+        font-size: 14px;
+    }
+
+
+    /* EVIDENCE */
+
+    .evidence {
+        min-height: 450px;
+
+        padding: 70px 18px;
+    }
+
+    .evidence h2 {
+        font-size: clamp(50px, 15vw, 75px);
+    }
+
+
+    /* FOOTER */
+
     footer {
+        padding: 40px 18px;
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -595,21 +904,44 @@ footer p {
     }
 }
 
-@media (max-width: 500px) {
+
+/* ==================================================
+   SMALL PHONE
+================================================== */
+
+@media (max-width: 380px) {
 
     .hero h1 {
-        font-size: 90px;
+        font-size: 70px;
     }
 
     .hero h2 {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .member-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-file {
-        width: 100%;
+    .photo {
+        height: 220px;
     }
 }
+
+
+/* ==================================================
+   TOUCH DEVICE
+================================================== */
+
+@media (hover: none) {
+
+    .dossier-card:hover,
+    .member-card:hover {
+        transform: none;
+    }
+
+    .btn-red:hover {
+        transform: none;
+    }
+}
+```
